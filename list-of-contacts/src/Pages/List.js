@@ -1,30 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getAllList, editContact, deleteContact } from '../Utils/Functions';
+import { getAllList, /* editContact, */ deleteContact } from '../Utils/Functions';
 
 function List() {
-  const [ loading, setLoading ] = useState(true);
-  const [ data, setData ] = useState([]);
   const navigate = useNavigate();
+/*    const [ loading, setLoading ] = useState(true);
+  const [ data, setData ] = useState([]);
 
   useEffect(() => {
    setData(getAllList());
    setLoading(false);
-  }, []);
+  }, []); */
 
-  const handleClickEdit = async(numberId) => {
+/*   const handleClickEdit = async(numberId) => {
     await editContact(numberId);
   }
 
   const handleClickDelete = async(numberId) => {
     await deleteContact(numberId);
-  }
+  } */
 
   const handleClickAddContact = () => {
     navigate('/addContact');
   }
 
-  if (loading) return <h1>loading...</h1>;
+/*   if (loading) return <h1>loading...</h1>; */
   return (
     <main className='list'>
       <section>
@@ -39,7 +39,7 @@ function List() {
           <td>Email</td>
           <td>Ações</td>
         </tr>
-        {data[0].map((contact) => 
+{/*         {data[0].map((contact) => 
           <tr key={contact.id}>
             <td>{contact.id}</td>
             <td>{contact.name}</td>
@@ -48,7 +48,7 @@ function List() {
             <td><button onClick={() => handleClickEdit(contact.id)}>Editar</button></td>
             <td><button onClick={() => handleClickDelete(contact.id)}>Excluir</button></td>
           </tr>
-        )}
+        )} */}
       </select>
     </main>
   );
