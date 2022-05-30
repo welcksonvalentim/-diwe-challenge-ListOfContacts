@@ -8,7 +8,6 @@ function Login() {
   const handleClick = async(event) => {
     event.preventDefault();
     await sendLoginInputs(add);
-    alert('funcionou');
   };
 
   return (
