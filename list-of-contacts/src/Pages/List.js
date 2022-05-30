@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getAllList, /* editContact, */ deleteContact } from '../Utils/Functions';
+import Header from '../Components/Header';
 
 function List() {
   const navigate = useNavigate();
@@ -26,7 +27,8 @@ function List() {
 
 /*   if (loading) return <h1>loading...</h1>; */
   return (
-    <main className='list'>
+    <main>
+      <Header />
       <section>
         <h2>Listagem de contatos</h2>
         <button onClick={() => handleClickAddContact()}>Adicionar novo contato</button>
