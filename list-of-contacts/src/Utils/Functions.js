@@ -11,12 +11,12 @@ export async function getAllList() {
   return result;
 };
 
-export function createTask(add) {
+export function createContact(add) {
   const result = Axios.post(API_ENDPOINT, add).then((resp) => resp.data);
   return result;
 };
 
-export function excludeTask(numberId) {
+export function deleteContact(numberId) {
   const objectId = {id: numberId};
   const result = Axios.delete(API_ENDPOINT, {data: objectId}).then((resp) => resp.status);
   return result;
