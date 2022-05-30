@@ -29,36 +29,51 @@ function List() {
   return (
     <main>
       <Header />
-      <section>
-        <h2>Listagem de contatos</h2>
-        <button onClick={() => handleClickAddContact()}>Adicionar novo contato</button>
-      </section>
-      <select>
-        <tr>
-          <td>#</td>
-          <td>Nome</td>
-          <td>Celular</td>
-          <td>Email</td>
-          <td>Ações</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>1</td>
-          <td>1</td>
-          <td>1</td>
-          <td>1</td>
-        </tr>
-{/*         {data[0].map((contact) => 
-          <tr key={contact.id}>
-            <td>{contact.id}</td>
-            <td>{contact.name}</td>
-            <td>{contact.mobile}</td>
-            <td>{contact.email}</td>
-            <td><button onClick={() => handleClickEdit(contact.id)}>Editar</button></td>
-            <td><button onClick={() => handleClickDelete(contact.id)}>Excluir</button></td>
+      <section className='list'>
+        <section className='list-name'>
+          <h2>Listagem de contatos</h2>
+          <button onClick={() => handleClickAddContact()}>Adicionar novo contato</button>
+        </section>
+        <section className='list-contact'>
+        <table>
+        <thead>
+          <tr>
+            <td>#</td>
+            <td>Nome</td>
+            <td>Celular</td>
+            <td>Email</td>
+            <td>Ações</td>
           </tr>
-        )} */}
-      </select>
+        </thead> 
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+          </tr>
+        </tbody>
+        </table>
+  {/*         {data[0].map((contact) => 
+            <tr key={contact.id}>
+              <td>{contact.id}</td>
+              <td>{contact.name}</td>
+              <td>{contact.mobile}</td>
+              <td>{contact.email}</td>
+              <td><button onClick={() => handleClickEdit(contact.id)}>Editar</button></td>
+              <td><button onClick={() => handleClickDelete(contact.id)}>Excluir</button></td>
+            </tr>
+          )} */}
+        </section>
+      </section>
     </main>
   );
 }
