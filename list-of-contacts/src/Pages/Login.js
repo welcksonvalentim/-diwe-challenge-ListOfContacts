@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { sendLoginInputs } from '../Functions/Functions';
+import { sendLoginInputs } from '../Utils/Functions';
 import '../App.css';
 
 function Login() {
@@ -8,12 +8,13 @@ function Login() {
   const handleClick = async(event) => {
     event.preventDefault();
     await sendLoginInputs(add);
+    alert('funcionou');
   };
 
   return (
     <main>
       <section>
-        <img alt='imagem teste' src='https://www.google.com/url?sa=i&url=https%3A%2F%2Fcoodesh.com%2Fblog%2Frh-tech%2Frecrutamento%2Fcontratar-desenvolvedor-pleno-dicas-para-acertar-no-recrutamento%2F&psig=AOvVaw3VqO3R0-Pvrs0uNd3rlebT&ust=1653996920384000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCJC7ue2Qh_gCFQAAAAAdAAAAABAD'/>
+        <img alt='imagem teste' src=''/>
       </section>
       <section>
         <h1>Bem-vindo!</h1>
@@ -32,7 +33,7 @@ function Login() {
           <label htmlFor='password'>
             <h4>Senha</h4>
             <input
-              type='password'
+              type='text'
               placeholder='Digite sua senha'
               name='password'
               onChange={(event) => setAdd({...add, password: event.target.value})}
