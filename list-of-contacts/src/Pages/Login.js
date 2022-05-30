@@ -1,21 +1,25 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { sendLoginInputs } from '../Utils/Functions';
-import '../App.css';
+import loginImage from '../Images/loginImage.png';
 
 function Login() {
   const [add, setAdd] = useState({ email: '', password: ''});
+  const navigate = useNavigate();
 
   const handleClick = async(event) => {
     event.preventDefault();
     await sendLoginInputs(add);
+    navigate('/addContact');
   };
 
   return (
-    <main>
-      <section>
-        <img alt='imagem teste' src=''/>
+    <main className='login'>
+      <section className='login-image'>
+        <img alt='dev man in desk' src={loginImage}/>
       </section>
-      <section>
+      <section className='login-information'>
+      <link href="http://fonts.cdnfonts.com/css/montserrat" rel="stylesheet"/>
         <h1>Bem-vindo!</h1>
         <h2>Faça login para acessar nossa plataforma</h2>
         <form className='login' onSubmit={ (event) => handleClick(event) }>
@@ -40,13 +44,7 @@ function Login() {
             />
           </label>
           <label htmlFor='button'>
-            <input
-              className='loginButton'
-              type='submit'
-              name='button'
-              value='Fazer Login'
-              required
-            />
+            <button type='submit'>Fazer Login</button>
           </label>
         </form>
       </section>

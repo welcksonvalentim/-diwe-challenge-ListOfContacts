@@ -1,5 +1,5 @@
 import Axios from 'axios';
-const API_ENDPOINT = 'https://contacts-api.prd.parceirodaconstrucao.com.br/auth/login';
+const API_ENDPOINT = 'https://contacts-api.prd.parceirodaconstrucao.com.br/auth/login/';
 
 export async function sendLoginInputs(add) {
   const result = await Axios.post(API_ENDPOINT, add).then((resp) => resp.data);
