@@ -10,3 +10,14 @@ export async function getAllList() {
   const result = await Axios.get(API_ENDPOINT).then((resp) => resp.data);
   return result;
 };
+
+export function createTask(add) {
+  const result = Axios.post(API_ENDPOINT, add).then((resp) => resp.data);
+  return result;
+};
+
+export function excludeTask(numberId) {
+  const objectId = {id: numberId};
+  const result = Axios.delete(API_ENDPOINT, {data: objectId}).then((resp) => resp.status);
+  return result;
+};
