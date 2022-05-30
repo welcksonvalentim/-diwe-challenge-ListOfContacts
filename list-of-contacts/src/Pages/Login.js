@@ -3,7 +3,7 @@ import { sendLoginInputs } from '../Functions/Functions';
 import '../App.css';
 
 function Login() {
-  const [add, setAdd] = useState({ description: '', status: '', priority: ''});
+  const [add, setAdd] = useState({ email: '', password: ''});
 
   const handleClick = async(event) => {
     event.preventDefault();
@@ -25,7 +25,7 @@ function Login() {
               type='email'
               placeholder='Digite seu email'
               name='email'
-              onChange={(event) => setAdd({...add, description: event.target.value})}
+              onChange={(event) => setAdd({...add, email: event.target.value})}
               required
             />
           </label>
@@ -35,7 +35,7 @@ function Login() {
               type='password'
               placeholder='Digite sua senha'
               name='password'
-              onChange={(event) => setAdd({...add, status: event.target.value})}
+              onChange={(event) => setAdd({...add, password: event.target.value})}
               required
             />
           </label>
