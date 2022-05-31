@@ -28,6 +28,7 @@ function List() {
 /*   if (loading) return <h1>loading...</h1>; */
   return (
     <main>
+      <link href="http://fonts.cdnfonts.com/css/montserrat" rel="stylesheet"/>
       <Header />
       <section className='list'>
         <section className='list-name'>

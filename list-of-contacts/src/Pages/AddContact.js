@@ -12,6 +12,7 @@ function Login() {
 
   return (
     <main className= 'addContact '>
+      <link href="http://fonts.cdnfonts.com/css/montserrat" rel="stylesheet"/>
       <Header />
       <section className= 'addContact-section'>
         <h1>Cadastre um novo contato</h1>
@@ -20,6 +21,7 @@ function Login() {
           <label htmlFor='name'>
             <h4>Nome Completo</h4>
             <input
+              className='addContact-name'
               type='text'
               placeholder='Digite o nome do contato'
               name='name'
@@ -30,6 +32,7 @@ function Login() {
           <label htmlFor='email'>
             <h4>Email</h4>
             <input
+              className='addContact-email'
               type='email'
               placeholder='Digite o email'
               name='email'
@@ -40,6 +43,7 @@ function Login() {
           <label htmlFor='mobile'>
             <h4>Celular</h4>
             <input
+              className='addContact-celular'
               type='number'
               placeholder='Digite o senha'
               name='mobile'
@@ -48,13 +52,7 @@ function Login() {
             />
           </label>
           <label htmlFor='button'>
-            <input
-              className='loginButton'
-              type='submit'
-              name='button'
-              value='Cadastrar contato'
-              required
-            />
+            <button type='submit'>Cadastrar contato</button>
           </label>
         </form>
       </section>

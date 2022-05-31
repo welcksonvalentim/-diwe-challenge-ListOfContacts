@@ -190,6 +190,10 @@ tr:nth-child(even) {
   border-radius: 8px;
 }
 
+.addContact-section form {
+  flex-wrap: wrap;
+}
+
 .addContact-section h1 {
   margin-top: 20px;
   color: #244677;
@@ -211,4 +215,50 @@ tr:nth-child(even) {
   font-weight: 500;
   font-size: 16px;
   line-height: 148%;
+}
+
+.addContact-section h4 {
+  color: #12295B;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  margin-left: 15px;
+  font-size: 16px;
+  line-height: 148%;
+}
+
+.addContact-name {
+  background: #F1F3F5;
+  border-radius: 8px;
+  margin-left: 15px;
+  width: 744px;
+  height: 56px;
+}
+
+.addContact-email, .addContact-celular {
+  background: #F1F3F5;
+  border-radius: 8px;
+  margin-left: 15px;
+  width: 361px;
+  height: 56px;
+}
+
+.addContact-section button {
+  margin-top: 50px;
+  width: 744px;
+  height: 56px;
+  left: 348px;
+  top: 632px;
+  background: #12295B;
+  border-radius: 8px;
+  order: 0;
+  flex-grow: 0;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
 }
