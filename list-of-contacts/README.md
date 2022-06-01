@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Boas vindas ao Desafio Agenda de Contatos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto utiliza uma API fornecida e endpoints para manipulação de dados, desenvolvendo um CRUD. Os dados são renderizados através da conexão com a aplicação back end, validada por bearer token.
 
-## Available Scripts
+## Funcionalidades da aplicação
 
-In the project directory, you can run:
+Com esta aplicação podemos visualizar a lista contatos, criar novos contatos, atualizar os contatos existentes e exluir o contato, exibindo as informações de nome, email e telefone.
+Todas as informações utilizadas estão armazenadas no banco de dados e passíveis de manipulação.
 
-### `npm start`
+### Tecnologias utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Aplicação desenvolvida com `React.js`, com gerenciamento de estado por meio de `Hooks`.
+Aplicação recebe e trata promisses proveniente do retorno de informações do projeto `Back End`.
+Estilização da página desenvolvida em `css`.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Acesso ao projeto
 
-### `npm test`
+Realizado deploy da aplicação na plataforma Surge e disponível em:
+* https://welckson_desafio_diwe.surge.sh/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Aplicação BackEnd disponível no repositório:
+* https://github.com/welcksonvalentim/ListOfContacts-diwe-challenge/tree/master/list-of-contacts
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Ilustração da aplicação em funcionamento
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img alt="Tela Login" width=400px src="src/Images/login.png" />
+<img alt="Tela Lista de contados" width=400px src="src/Images/listOfContacts.png" />
+<img alt="Tela Criação de contatos" width=400px src="src/Images/addContact.png" />
+<img alt="Tela Edição de contatos" width=400px src="src/Images/editContac.png" />
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Para rodar a aplicação localmente
 
-### `npm run eject`
+1. Clone o repositório, com o comando:
+    * `git@github.com:welcksonvalentim/ListOfContacts-diwe-challenge.git`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Entre na pasta do repositório que você acabou de clonar:
+    * `cd ListOfContacts-diwe-challenge`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Instale as dependências e inicialize o projeto:
+    * `npm install`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Inicialize o projeto:
+    * `npm start`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Próximos Passos do Projeto
 
-## Learn More
+* Continuidade ao desenvolvimento de testes;
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
