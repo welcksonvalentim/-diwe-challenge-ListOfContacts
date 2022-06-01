@@ -53,5 +53,3 @@ Aplicação BackEnd disponível no repositório:
 * Manipulação de token do tipo bearer;
 * Lógica para retornar a página anterior;
 * Biblioteca de icones;
-
-
