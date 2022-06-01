@@ -1,30 +1,31 @@
 import React, { useState } from 'react';
 import Header from '../Components/Header';
-import { createContact } from '../Utils/Functions';
+import { editContact } from '../Utils/Functions';
 import { useListOfContacts } from '../Context/Context';
 
-function Login() {
+function EditContact() {
   const [add, setAdd] = useState({ name: '', email: '', mobile: ''});
-  const { token } = useListOfContacts();
+  const { dataContact, token } = useListOfContacts();
 
   const handleClick = async(event) => {
     event.preventDefault();
-    await createContact(add, token);
+    await editContact(dataContact.id, add, token);
   };
 
   return (
-    <main className= 'addContact '>
+    <main className= 'editContact'>
       <link href="http://fonts.cdnfonts.com/css/montserrat" rel="stylesheet"/>
       <Header />
-      <section className= 'addContact-section'>
-        <h1>Cadastre um novo contato</h1>
-        <h2>Preencha as informações para cadastrar um novo contato</h2>
+      <section className= 'editContact-section'>
+        <h1>Atualiza um contato</h1>
+        <h2>Preencha as informações para atualizar os dados do contato</h2>
         <form className='login' onSubmit={ (event) => handleClick(event) }>
           <label htmlFor='name'>
             <h4>Nome Completo</h4>
             <input
-              className='addContact-name'
+              className='editContact-name'
               type='text'
+              value={dataContact.name}
               placeholder='Digite o nome do contato'
               name='name'
               onChange={(event) => setAdd({...add, name: event.target.value})}
@@ -34,8 +35,9 @@ function Login() {
           <label htmlFor='email'>
             <h4>Email</h4>
             <input
-              className='addContact-email'
+              className='editContact-email'
               type='email'
+              value={dataContact.email}
               placeholder='Digite o email'
               name='email'
               onChange={(event) => setAdd({...add, email: event.target.value})}
@@ -45,8 +47,9 @@ function Login() {
           <label htmlFor='mobile'>
             <h4>Celular</h4>
             <input
-              className='addContact-celular'
+              className='editContact-celular'
               type='number'
+              value={dataContact.mobile}
               placeholder='Digite o celular'
               name='mobile'
               onChange={(event) => setAdd({...add, mobile: event.target.value})}
@@ -54,7 +57,7 @@ function Login() {
             />
           </label>
           <label htmlFor='button'>
-            <button type='submit'>Cadastrar contato</button>
+            <button type='submit'>Atualizar contato</button>
           </label>
         </form>
       </section>
@@ -62,4 +65,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default EditContact;

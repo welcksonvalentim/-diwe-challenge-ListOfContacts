@@ -8,21 +8,24 @@ function List() {
   const navigate = useNavigate();
   const [ loading, setLoading ] = useState(true);
   const [ data, setData ] = useState([]);
-  const { token } = useListOfContacts();
+  const { setDataContact, token } = useListOfContacts();
 
   useEffect(() => {
     returnAllList(token);
     setLoading(false);
-  }, [data]);
+  }, [data, token]);
 
   const returnAllList = async (token) => {
     const returnAllList = await getAllList(token);
     setData(returnAllList);
     return returnAllList;
   }
- /*   const handleClickEdit = async(numberId) => {
-    await editContact(numberId);
-  } */
+
+  const handleClickEdit = async(contact) => {
+    console.log(contact);
+    await setDataContact(contact);
+    navigate('/editContact');
+  }
 
   const handleClickDelete = async(numberId) => {
     await deleteContact(numberId, token);
@@ -61,7 +64,10 @@ function List() {
                   <td>{contact.name}</td>
                   <td>{contact.mobile}</td>
                   <td>{contact.email}</td>
-                  <td><button onClick={() => handleClickDelete(contact.id)}>Excluir</button></td>
+                  <td>
+                    <button onClick={() => handleClickEdit(contact)}>Editar</button>
+                    <button onClick={() => handleClickDelete(contact.id)}>Excluir</button>
+                  </td>
                 </tr>) : []}
             </tbody>
           </table>

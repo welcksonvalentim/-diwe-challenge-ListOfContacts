@@ -20,11 +20,18 @@ export function createContact(add, token) {
   return result;
 };
 
+export function editContact(numberId, add, token) {
+  const config = { headers: { Authorization: `Bearer ${token}` } };
+  const API_ENDPOINT_CONTACTS_ID = (`${API_ENDPOINT_CONTACTS}/${numberId}`);
+  const result = Axios.post(API_ENDPOINT_CONTACTS_ID, add, config).then((resp) => resp.data); 
+  return result;
+};
+
 // Mob20we23##
 
 export function deleteContact(numberId, token) {
   const config = { headers: { Authorization: `Bearer ${token}` } };
-  const test = (`${API_ENDPOINT_CONTACTS}/${numberId}`);
-  const result = Axios.delete(test, config).then((resp) => resp.data);
+  const API_ENDPOINT_CONTACTS_ID = (`${API_ENDPOINT_CONTACTS}/${numberId}`);
+  const result = Axios.delete(API_ENDPOINT_CONTACTS_ID, config).then((resp) => resp.data);
   return result;
 };
