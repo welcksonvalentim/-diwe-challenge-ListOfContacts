@@ -45,5 +45,13 @@ Aplicação BackEnd disponível no repositório:
 
 ### Próximos Passos do Projeto
 
+* Continuidade a estilização dos botões de edição e exclusão de contatos;
 * Continuidade ao desenvolvimento de testes;
+
+### Lições Aprendidas com Projeto
+
+* Manipulação de token do tipo bearer;
+* Lógica para retornar a página anterior;
+* Biblioteca de icones;
+
 

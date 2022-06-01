@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { getAllList, /* editContact, */ deleteContact } from '../Utils/Functions';
-import Header from '../Components/Header';
 import { useListOfContacts } from '../Context/Context';
+import { useNavigate } from 'react-router-dom';
+import Header from '../Components/Header';
+import { getAllList, deleteContact } from '../Utils/Functions';
+import edit from '../Images/edit.svg';
+import trash from '../Images/trash.svg';
 
 function List() {
   const navigate = useNavigate();
@@ -66,8 +68,12 @@ function List() {
                   <td>{contact.mobile}</td>
                   <td>{contact.email}</td>
                   <td>
-                    <button onClick={() => handleClickEdit(contact)}>Editar</button>
-                    <button onClick={() => handleClickDelete(contact.id)}>Excluir</button>
+                    <button onClick={() => handleClickEdit(contact)}>
+                      <img alt="arrow left" src={edit}/>Editar
+                    </button>
+                    <button onClick={() => handleClickDelete(contact.id)}>
+                      <img alt="arrow left" src={trash}/>Excluir
+                    </button>
                   </td>
                 </tr>) : []}
             </tbody>

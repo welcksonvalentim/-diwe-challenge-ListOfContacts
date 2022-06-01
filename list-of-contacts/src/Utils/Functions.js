@@ -27,8 +27,6 @@ export function editContact(numberId, add, token) {
   return result;
 };
 
-// Mob20we23##
-
 export function deleteContact(numberId, token) {
   const config = { headers: { Authorization: `Bearer ${token}` } };
   const API_ENDPOINT_CONTACTS_ID = (`${API_ENDPOINT_CONTACTS}/${numberId}`);
