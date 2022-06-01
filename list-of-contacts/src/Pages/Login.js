@@ -2,15 +2,18 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { sendLoginInputs } from '../Utils/Functions';
 import loginImage from '../Images/loginImage.png';
+import { useListOfContacts } from '../Context/Context';
 
 function Login() {
   const [add, setAdd] = useState({ email: '', password: ''});
+  const { setToken } = useListOfContacts();
   const navigate = useNavigate();
 
   const handleClick = async(event) => {
     event.preventDefault();
-    await sendLoginInputs(add);
-    navigate('/addContact');
+    const returnToken = await sendLoginInputs(add);
+    await setToken(returnToken);
+    navigate('/contacts');
   };
 
   return (

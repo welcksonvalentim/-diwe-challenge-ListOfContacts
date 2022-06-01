@@ -4,13 +4,14 @@ export const Context = createContext();
 
 export default function MyContextProvider({children}) {
   const [listContacts, setListContacts] = useState([]);
-  return <Context.Provider value={{listContacts, setListContacts}}>
+  const [token, setToken] = useState('');
+  return <Context.Provider value={{listContacts, setListContacts, token, setToken}}>
     {children}
   </Context.Provider>
 }
 
 export function useListOfContacts() {
   const context = useContext(Context);
-  const {listContacts, setListContacts} = context;
-  return { listContacts, setListContacts };
+  const {listContacts, setListContacts, token, setToken} = context;
+  return { listContacts, setListContacts, token, setToken };
 }

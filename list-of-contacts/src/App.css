@@ -103,7 +103,7 @@
 .list {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-content: flex-start;
   justify-content: center;
   width: 100vw;
   height: 100vh;
@@ -119,6 +119,7 @@
   margin-top: 20px;
   background: #FFFFFF;
   width: 80vw;
+  height: 20vh;
 }
 
 .list-name h2 {
@@ -142,6 +143,9 @@
 }
 
 .list-contact thead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background: #FFFFFF;
   font-family: 'Poppins';
   font-style: normal;
@@ -149,6 +153,7 @@
   font-size: 20px;
   line-height: 120%;
   text-align: center;
+  height: 9vh;
   letter-spacing: -0.02em;
   color: #244677;
 }
@@ -160,6 +165,17 @@
   background: #FFFFFF;
   text-align: center;
   width: 80vw;
+}
+
+.list-contact tbody {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 148%;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #495057;
 }
 
 tr:nth-child(even) {
