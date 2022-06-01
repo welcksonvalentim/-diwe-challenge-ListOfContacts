@@ -8,23 +8,24 @@ export async function sendLoginInputs(add) {
   return result.token;
 };
 
-// Mob20we23##
-
 export async function getAllList(token) {
   const config = { headers: { Authorization: `Bearer ${token}` } };
   const result = await Axios.get(API_ENDPOINT_CONTACTS, config).then((resp) => resp.data);
   return result;
 };
 
-export function createContact(add) {
-  /* const config = { headers: { Authorization: `Bearer ${token}` } }; */
-  const result = Axios.post(API_ENDPOINT_BASE, add).then((resp) => resp.data);
+export function createContact(add, token) {
+  const config = { headers: { Authorization: `Bearer ${token}` } };
+  const result = Axios.post(API_ENDPOINT_CONTACTS, config, add).then((resp) => resp.data);
+  console.log(add, token);  
   return result;
 };
 
-export function deleteContact(numberId) {
-  /* const config = { headers: { Authorization: `Bearer ${token}` } }; */
+// Mob20we23##
+
+export function deleteContact(numberId, token) {
+  const config = { headers: { Authorization: `Bearer ${token}` } };
   const objectId = {id: numberId};
-  const result = Axios.delete(API_ENDPOINT_BASE, {data: objectId}).then((resp) => resp.status);
+  const result = Axios.delete(API_ENDPOINT_BASE, config, {data: objectId},).then((resp) => resp.status);
   return result;
 };

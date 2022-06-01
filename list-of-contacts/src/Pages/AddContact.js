@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import Header from '../Components/Header';
 import { createContact } from '../Utils/Functions';
+import { useListOfContacts } from '../Context/Context';
 
 function Login() {
   const [add, setAdd] = useState({ name: '', email: '', mobile: ''});
+  const { token } = useListOfContacts();
 
   const handleClick = async(event) => {
     event.preventDefault();
-    await createContact(add);
+    await createContact(add, token);
   };
 
   return (

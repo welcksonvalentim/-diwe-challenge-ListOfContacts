@@ -25,7 +25,7 @@ function List() {
   } */
 
   const handleClickDelete = async(numberId) => {
-    await deleteContact(numberId);
+    await deleteContact(numberId, token);
   }
 
   const handleClickAddContact = () => {
@@ -51,7 +51,6 @@ function List() {
                 <td>Celular</td>
                 <td>Email</td>
                 <td>Ações</td>
-                {console.log(data[0])}
               </tr>
             </thead> 
             <tbody>

@@ -39,7 +39,7 @@ function Login() {
           <label htmlFor='password'>
             <h4>Senha</h4>
             <input
-              type='text'
+              type='password'
               placeholder='Digite sua senha'
               name='password'
               onChange={(event) => setAdd({...add, password: event.target.value})}
