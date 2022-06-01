@@ -16,8 +16,7 @@ export async function getAllList(token) {
 
 export function createContact(add, token) {
   const config = { headers: { Authorization: `Bearer ${token}` } };
-  const result = Axios.post(API_ENDPOINT_CONTACTS, config, add).then((resp) => resp.data);
-  console.log(add, token);  
+  const result = Axios.post(API_ENDPOINT_CONTACTS, add, config).then((resp) => resp.data); 
   return result;
 };
 
@@ -25,7 +24,7 @@ export function createContact(add, token) {
 
 export function deleteContact(numberId, token) {
   const config = { headers: { Authorization: `Bearer ${token}` } };
-  const objectId = {id: numberId};
-  const result = Axios.delete(API_ENDPOINT_BASE, config, {data: objectId},).then((resp) => resp.status);
+  const test = (`${API_ENDPOINT_CONTACTS}/${numberId}`);
+  const result = Axios.delete(test, config).then((resp) => resp.data);
   return result;
 };

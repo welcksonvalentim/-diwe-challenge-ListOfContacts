@@ -13,7 +13,7 @@ function List() {
   useEffect(() => {
     returnAllList(token);
     setLoading(false);
-  }, []);
+  }, [data]);
 
   const returnAllList = async (token) => {
     const returnAllList = await getAllList(token);
@@ -26,6 +26,7 @@ function List() {
 
   const handleClickDelete = async(numberId) => {
     await deleteContact(numberId, token);
+    return;
   }
 
   const handleClickAddContact = () => {
