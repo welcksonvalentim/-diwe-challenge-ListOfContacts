@@ -27,7 +27,7 @@ Aplicação BackEnd disponível no repositório:
 <img alt="Tela Login" width=400px src="src/Images/login.png" />
 <img alt="Tela Lista de contados" width=400px src="src/Images/listOfContacts.png" />
 <img alt="Tela Criação de contatos" width=400px src="src/Images/addContact.png" />
-<img alt="Tela Edição de contatos" width=400px src="src/Images/editContac.png" />
+<img alt="Tela Edição de contatos" width=400px src="src/Images/editContact.png" />
 
 ## Para rodar a aplicação localmente
 
