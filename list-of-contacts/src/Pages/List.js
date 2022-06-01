@@ -22,7 +22,6 @@ function List() {
   }
 
   const handleClickEdit = async(contact) => {
-    console.log(contact);
     await setDataContact(contact);
     navigate('/editContact');
   }

@@ -23,7 +23,7 @@ export function createContact(add, token) {
 export function editContact(numberId, add, token) {
   const config = { headers: { Authorization: `Bearer ${token}` } };
   const API_ENDPOINT_CONTACTS_ID = (`${API_ENDPOINT_CONTACTS}/${numberId}`);
-  const result = Axios.post(API_ENDPOINT_CONTACTS_ID, add, config).then((resp) => resp.data); 
+  const result = Axios.put(API_ENDPOINT_CONTACTS_ID, add, config).then((resp) => resp.data); 
   return result;
 };
 

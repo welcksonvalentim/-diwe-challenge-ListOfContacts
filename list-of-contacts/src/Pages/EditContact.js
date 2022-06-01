@@ -25,8 +25,7 @@ function EditContact() {
             <input
               className='editContact-name'
               type='text'
-              value={dataContact.name}
-              placeholder='Digite o nome do contato'
+              placeholder={dataContact.name}
               name='name'
               onChange={(event) => setAdd({...add, name: event.target.value})}
               required
@@ -37,8 +36,7 @@ function EditContact() {
             <input
               className='editContact-email'
               type='email'
-              value={dataContact.email}
-              placeholder='Digite o email'
+              placeholder={dataContact.email}
               name='email'
               onChange={(event) => setAdd({...add, email: event.target.value})}
               required
@@ -49,8 +47,7 @@ function EditContact() {
             <input
               className='editContact-celular'
               type='number'
-              value={dataContact.mobile}
-              placeholder='Digite o celular'
+              placeholder={dataContact.mobile}
               name='mobile'
               onChange={(event) => setAdd({...add, mobile: event.target.value})}
               required
