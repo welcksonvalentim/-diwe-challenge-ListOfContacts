@@ -278,3 +278,93 @@ tr:nth-child(even) {
   font-weight: 500;
   font-size: 16px;
 }
+
+
+.editContact  {
+  background: #F7F8FC;
+  display: block;
+  align-content: center;
+  justify-content: center;
+}
+
+.editContact-section {
+  width: 808px;
+  height: 543px;
+  margin-left: 200px;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.04);
+  border-radius: 8px;
+}
+
+.editContact-section form {
+  flex-wrap: wrap;
+}
+
+.editContact-section h1 {
+  padding-top: 20px;
+  color: #244677;
+  text-align: center;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 124%;
+}
+
+.editContact-section h2 {
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #495057;
+  opacity: 0.64;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 148%;
+}
+
+.editContact-section h4 {
+  color: #12295B;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  margin-left: 15px;
+  font-size: 16px;
+  line-height: 148%;
+}
+
+.editContact-name {
+  background: #F1F3F5;
+  border-radius: 8px;
+  margin-left: 15px;
+  width: 744px;
+  height: 56px;
+}
+
+.editContact-email, .editContact-celular {
+  background: #F1F3F5;
+  border-radius: 8px;
+  margin-left: 15px;
+  width: 361px;
+  height: 56px;
+}
+
+.editContact-section button {
+  margin-top: 50px;
+  width: 744px;
+  height: 56px;
+  left: 348px;
+  top: 632px;
+  background: #12295B;
+  border-radius: 8px;
+  order: 0;
+  flex-grow: 0;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+}

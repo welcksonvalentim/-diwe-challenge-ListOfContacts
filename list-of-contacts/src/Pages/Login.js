@@ -18,11 +18,13 @@ function Login() {
 
   return (
     <main className='login'>
+      <link href="http://fonts.cdnfonts.com/css/montserrat" rel="stylesheet"/>
+      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'/>
+      <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'/>
       <section className='login-image'>
         <img alt='dev man in desk' src={loginImage}/>
       </section>
       <section className='login-information'>
-      <link href="http://fonts.cdnfonts.com/css/montserrat" rel="stylesheet"/>
         <h1>Bem-vindo!</h1>
         <h2>Faça login para acessar nossa plataforma</h2>
         <form className='login' onSubmit={ (event) => handleClick(event) }>

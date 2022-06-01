@@ -39,6 +39,8 @@ function List() {
   return (
     <main className='list'>
       <link href="http://fonts.cdnfonts.com/css/montserrat" rel="stylesheet"/>
+      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'/>
+      <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'/>
       <Header />
       <section>
         <section className='list-name'>
